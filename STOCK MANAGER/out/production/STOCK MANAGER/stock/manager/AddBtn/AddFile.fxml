@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="494.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.manager.AddBtn.AddFile">
+   <children>
+      <Pane prefHeight="495.0" prefWidth="678.0">
+         <children>
+            <HBox layoutX="47.0" layoutY="91.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="94.0" text="PRODUCT ID:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <JFXTextField fx:id="Id" onAction="#getId" prefHeight="25.0" prefWidth="398.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="47.0" layoutY="147.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="94.0" text="QUANTITY:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <JFXTextField fx:id="Qty" onAction="#getQty" prefHeight="25.0" prefWidth="402.0">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="47.0" layoutY="205.0" prefHeight="25.0" prefWidth="516.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="126.0" text="PRICE:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <JFXTextField fx:id="Price" onAction="#getPrice" prefHeight="25.0" prefWidth="459.0">
+                     <HBox.margin>
+                        <Insets left="55.0" />
+                     </HBox.margin></JFXTextField>
+               </children>
+            </HBox>
+            <HBox layoutX="240.0" layoutY="270.0">
+               <children>
+                  <JFXButton fx:id="Save" buttonType="RAISED" onAction="#onSave" prefHeight="44.0" prefWidth="75.0" style="-fx-background-color: red;" text="SAVE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="Close" buttonType="RAISED" onAction="#onClose" prefHeight="44.0" prefWidth="75.0" style="-fx-background-color: red;" text="CLOSE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

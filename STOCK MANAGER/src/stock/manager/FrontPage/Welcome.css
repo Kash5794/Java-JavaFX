@@ -1,0 +1,41 @@
+#img{
+-fx-background-image:url("background.jpg");
+-fx-background-repeat:stretch;
+}
+
+#btn{
+	-fx-background-color:white;
+	-fx-text-fill:black;
+}
+#btn:hover{
+-fx-background-color:black;
+-fx-text-fill: white;
+}
+#click{
+-fx-background-color:black;
+-fx-text-fill:white;
+}
+#click:hover{
+-fx-background-color:white;
+-fx-text-fill:black;
+}
+.table-view .table-cell{
+
+	
+	-fx-font-size:20px;
+}
+.table-view .column-header-background .label{
+	-fx-background-color: transparent;
+	-fx-font-weight:bold;
+	-fx-text-fill:black;
+	-fx-font-size:20px;
+}
+.table-row-cell:even{
+
+	
+	-fx-background-color:lightgray;
+	-fx-background-insets:0.0, 0.0 0.0 1.0 0.0;
+}
+#nameBtn:hover{
+-fx-background-color:lightblue;
+}

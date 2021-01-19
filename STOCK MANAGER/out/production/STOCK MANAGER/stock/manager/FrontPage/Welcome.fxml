@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane id="img" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@Welcome.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.manager.FrontPage.Welcome">
+   <children>
+      <BorderPane opacity="0.74" prefHeight="518.0" prefWidth="871.0" style="-fx-background-color: #002266;">
+         <StackPane.margin>
+            <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+         </StackPane.margin>
+         <center>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="618.0" style="-fx-alignment: center; -fx-border-color: white;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+               </BorderPane.margin>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="67.0" prefWidth="747.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../icon/iconfinder_Rounded-31_2024644.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="51.0" prefWidth="607.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="111.0" text="USERNAME:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="userField" prefHeight="36.0" prefWidth="441.0" style="-fx-background-color: white;" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="51.0" prefWidth="607.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="111.0" text="PASSWORD:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXPasswordField fx:id="passField" prefHeight="36.0" prefWidth="441.0" style="-fx-background-color: white;" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="51.0" prefWidth="463.0">
+                     <children>
+                        <JFXButton id="btn" onAction="#onLogin" prefHeight="43.0" prefWidth="113.0" stylesheets="@Welcome.css" text="LOGIN" textFill="#002266">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton id="btn" layoutX="10.0" layoutY="10.0" onAction="#onSignup" prefHeight="44.0" prefWidth="108.0" stylesheets="@Welcome.css" text="SIGN-UP" textFill="#002266">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="logginLabel" prefHeight="30.0" prefWidth="275.0" text="Logging in ........." textFill="WHITE" visible="false">
+                     <VBox.margin>
+                        <Insets right="620.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hboxHint" alignment="CENTER" prefHeight="21.0" prefWidth="822.0" visible="false">
+                     <children>
+                        <Label fx:id="hintText" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="231.0" text="Incorrect username or password" textFill="#f01f2d">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT" layoutX="140.0" layoutY="326.0" prefHeight="36.0" prefWidth="593.0" style="-fx-background-color: BLACK;">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="125.0" style="-fx-foreground-color: white;" text="Forgot Password?" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="click" fx:id="clickButton" prefHeight="33.0" prefWidth="94.0" text="click here." textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <Pane prefHeight="600.0" prefWidth="56.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="470.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <Text fx:id="showText" fill="#d0eb1a" onDragDetected="#onTextMoving" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO EMMA-TOB TECHNOLOGIES STORE MANAGEMENT SYSTEM" textAlignment="CENTER" wrappingWidth="722.9830722808838" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Aachen Bold BT" size="16.0" />
+               </font>
+            </Text>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

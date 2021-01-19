@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stock.manager.StockFXMLController">
+   <children>
+      <BorderPane layoutY="26.0" prefHeight="702.0" prefWidth="988.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="619.0" prefWidth="157.0" style="-fx-background-color: #002266;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="-1.0" layoutY="110.0" prefHeight="381.0" prefWidth="199.0">
+                     <children>
+                        <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" prefHeight="115.0" prefWidth="226.0" style="-fx-background-color: lightgray;" text="Store" textFill="RED">
+                           <graphic>
+                              <ImageView fitHeight="82.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/stockRed.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </JFXButton>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="221.0" style="-fx-foreground-color: white;" text="......." textFill="WHITE">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" prefHeight="109.0" prefWidth="225.0" style="-fx-background-color: lightgray;" text="Order" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="82.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/sell2Red.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="221.0" style="-fx-foreground-color: white;" text="......." textFill="WHITE">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <JFXButton alignment="BOTTOM_CENTER" contentDisplay="TOP" prefHeight="109.0" prefWidth="225.0" style="-fx-background-color: lightgray;" text="Settings" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="82.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../icon/settingsRed.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="221.0" style="-fx-foreground-color: white;" text="......." textFill="WHITE">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="190.0" style="-fx-foreground-color: white;" text="DASHBOARD" textFill="WHITE">
+                     <font>
+                        <Font name="Algerian" size="30.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="54.0" prefHeight="3.0" prefWidth="198.0" />
+                  <Pane layoutX="164.0" layoutY="80.0" prefHeight="20.0" prefWidth="46.0" />
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <BorderPane prefHeight="93.0" prefWidth="988.0" style="-fx-background-color: #002266;" BorderPane.alignment="CENTER">
+               <center>
+                  <ImageView fitHeight="92.0" fitWidth="246.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../icon/emma.jpg" />
+                     </image>
+                     <BorderPane.margin>
+                        <Insets left="100.0" />
+                     </BorderPane.margin>
+                  </ImageView>
+               </center>
+               <right>
+                  <Pane prefHeight="93.0" prefWidth="216.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton id="nameBtn" fx:id="nameBtn" layoutX="111.0" layoutY="55.0" onAction="#onLogout" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: RED;" stylesheets="@FrontPage/Welcome.css" text="LOGOUT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutY="14.0" prefHeight="20.0" prefWidth="74.0" text="Welcome" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nameLabel" layoutX="69.0" layoutY="14.0" prefHeight="20.0" prefWidth="149.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </right>
+               <left>
+                  <Pane prefHeight="93.0" prefWidth="261.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="6.0" layoutY="27.0" style="-fx-foreground-color: white;" text="SEARCH" textFill="WHITE">
+                           <font>
+                              <Font name="Aachen Bold BT" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="filteredField" focusColor="WHITE" layoutX="84.0" layoutY="25.0" onAction="#onTextType" onMouseClicked="#onTextfieldClicked" prefHeight="38.0" prefWidth="292.0" promptText="Search here" style="-fx-background-color: white;" unFocusColor="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font></JFXTextField>
+                     </children>
+                  </Pane>
+               </left>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </BorderPane>
+         </top>
+         <center>
+            <ScrollPane prefHeight="877.0" prefWidth="1479.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="100.0" right="10.0" />
+               </BorderPane.margin>
+               <content>
+                  <TabPane fx:id="TabPane" prefHeight="987.0" prefWidth="1023.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab>
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="958.0" prefWidth="1087.0">
+                                 <children>
+                                    <TableView id="table-view" fx:id="table" prefHeight="858.0" prefWidth="1022.0" stylesheets="@FrontPage/Welcome.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="SNCol" prefWidth="59.000030517578125" text="S/N" />
+                                        <TableColumn fx:id="nameCol" prefWidth="426.0" text="NAME" />
+                                          <TableColumn fx:id="QtyCol" minWidth="0.0" prefWidth="115.0" text="QTY" />
+                                          <TableColumn fx:id="UPCol" prefWidth="194.0" text="UNIT PRICE" />
+                                          <TableColumn fx:id="DateCol" editable="false" prefWidth="225.0" text="DATE " />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tabSell">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="-90.0" />
+               </BorderPane.margin>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="78.0" prefWidth="210.0" text="TOTAL PRODUCT COST:">
+                           <font>
+                              <Font name="Aachen Bold BT" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="total" alignment="CENTER" editable="false" prefHeight="54.0" prefWidth="360.0" style="-fx-background-color: transparent;" text="0.00">
+                           <HBox.margin>
+                              <Insets left="10.0" top="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+         </bottom>
+         <right>
+            <VBox prefHeight="977.0" prefWidth="152.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="addBtn" buttonType="RAISED" onAction="#onAddBtnClick" prefHeight="71.0" prefWidth="75.0" style="-fx-background-color: #002266;" text="." textFill="WHITE">
+                     <font>
+                        <Font name="Aachen Bold BT" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/add_black.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="deleteBtn" buttonType="RAISED" onAction="#onDelete" prefHeight="65.0" prefWidth="87.0" style="-fx-background-color: #002266;" text="." textFill="WHITE">
+                     <font>
+                        <Font name="Aachen Bold BT" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/52-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="refresh" buttonType="RAISED" onAction="#onRefresh" onMouseClicked="#refreshOnMouse" prefHeight="62.0" prefWidth="88.0" style="-fx-background-color: #002266;" text="." textFill="WHITE">
+                     <font>
+                        <Font name="Aachen Bold BT" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icon/refreshOne.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <VBox>
+                     <VBox.margin>
+                        <Insets top="200.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="8.0" prefWidth="152.0">
+                           <children>
+                              <Pane prefHeight="0.0" prefWidth="50.0" style="-fx-background-color: red;" />
+                              <Label prefHeight="17.0" prefWidth="36.0" text="LOW" textFill="#da2809">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="8.0" prefWidth="152.0">
+                           <children>
+                              <Pane prefHeight="0.0" prefWidth="50.0" style="-fx-background-color: #f1ce07;" />
+                              <Label prefHeight="17.0" prefWidth="62.0" text="MEDIUM" textFill="#f1ce07">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="32.0" prefHeight="8.0" prefWidth="152.0">
+                           <children>
+                              <Pane prefHeight="0.0" prefWidth="50.0" style="-fx-background-color: #19bc17;" />
+                              <Label prefHeight="17.0" prefWidth="36.0" text="FULL" textFill="#109e0e">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ProgressBar fx:id="progressBar" prefHeight="45.0" prefWidth="191.0" progress="0.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ProgressBar>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
